@@ -1,0 +1,72 @@
+.navbar {
+    padding: 10px;
+    display: flex;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: black;
+    font-size: x-large;
+    margin-left: 15px;
+}
+
+.navbar a:hover {
+    color: red;
+}
+
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 30%;
+    border-radius: 10px;
+}
+
+.close {
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button {
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 10px 15px;
+}
+
+footer {
+    text-align: center;
+    padding: 100px;
+    background-color: yellow;
+    color: black;
+}
+
+.videos {
+    
+        display: flex;
+        justify-content: center; 
+        gap: 200px; 
+    }
+
+    .menu {
+        display: flex;
+        justify-content: center; 
+        gap: 200px; 
+    }
+   
+   

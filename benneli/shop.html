@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grenzgaenger - Shop</title>
+    <link rel="stylesheet" href="shop.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: yellow !important;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img src="https://steamuserimages-a.akamaihd.net/ugc/433822495208140329/EB6662F24A58E09A5FCDA627104BB56F8190A1EA/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false" alt="querly" width="100" height="auto" ></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a aria-disabled="true"  aria-current="page" href="index.html">Domů</a>
+                      </li>
+                      <li class="nav-item">
+                        <a   aria-disabled="true" href="shop.html" >Obchod</a>
+                      </li>
+                      
+                      <li class="nav-item">
+                        <a  href="O-nás.html" tabindex="-1" aria-disabled="true">O nás</a>
+                      </li>
+                      <li class="nav-item">
+                        <a  href="podminky.html" tabindex="-1" aria-disabled="true" href="podminky.html">Podmínky</a>
+                      </li>
+                      <li class="nav-item">
+                        <a  href="kontakt.html" tabindex="-1" aria-disabled="true" href="kontakt.html">Kontakt</a>
+                      </li>
+                    </ul>
+                </ul>
+                <button class="btn btn-primary" id="viewCartBtn" data-bs-toggle="modal" data-bs-target="#cartModal">Košík (<span id="cartCount">0</span>)</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="header">
+        <h1>Prodej autodílů</h1>
+        <p>Vyberte si z naší široké nabídky kvalitních autodílů pro vaše vozidlo!</p>
+    </div>
+
+    <div class="container">
+        <div class="product">
+            <img src="img/desticky.jpg" alt="Brzdové destičky" class="img-fluid">
+            <h3>Brzdové destičky</h3>
+            <p>Kompletní sada brzdových destiček pro osobní automobily.</p>
+            <p class="price">1 500 Kč</p>
+            <button class="btn btn-primary" onclick="addToCart(1, 'Brzdové destičky', 1500)">Přidat do košíku</button>
+
+            <label for="color-select-2">Vyberte barvu:</label>
+            <select id="color-select-2" class="form-select">
+                <option value="red">Červená</option>
+                <option value="blue">Modrá</option>
+                <option value="green">Zelená</option>
+            </select>
+        </div>
+
+        <div class="product">
+            <img src="img/filtr-vzduchovy.jpg" alt="Filtr vzduchový" class="img-fluid">
+            <h3>Filtr vzduchový</h3>
+            <p>Vysokokvalitní vzduchový filtr pro zajištění optimálního výkonu motoru.</p>
+            <p class="price">650 Kč</p>
+            <button class="btn btn-primary" onclick="addToCart(2, 'Filtr vzduchový', 650)">Přidat do košíku</button>
+
+            <label for="color-select-2">Vyberte barvu:</label>
+            <select id="color-select-2" class="form-select">
+                <option value="red">Červená</option>
+                <option value="blue">Modrá</option>
+                <option value="green">Zelená</option>
+            </select>
+        </div>
+
+        <div class="product">
+            <img src="img/zarovky.jpg" alt="Žárovky do světel" class="img-fluid">
+            <h3>Žárovky do světel</h3>
+            <p>Set žárovek do předních a zadních světel automobilu.</p>
+            <p class="price">250 Kč</p>
+            <button class="btn btn-primary" onclick="addToCart(3, 'Žárovky do světel', 250)">Přidat do košíku</button>
+
+            <label for="color-select-2">Vyberte barvu:</label>
+            <select id="color-select-2" class="form-select">
+                <option value="red">Červená</option>
+                <option value="blue">Modrá</option>
+                <option value="green">Zelená</option>
+            </select>
+        </div>
+
+        <div class="product">
+          <img src="img/olejovy-filtr-bosch-f026407209.jpg.big.jpg" alt="Autodíl 4">
+          <h3>Olejový filter</h3>
+          <p>Olejový filter na olej u automobilu.</p>
+          <p class="price">230 Kč</p>
+          <button class="btn btn-primary" onclick="addToCart(4, 'Olejový filter', 230)">Přidat do košíku</button>
+
+          <label for="color-select-2">Vyberte barvu:</label>
+          <select id="color-select-2" class="form-select">
+              <option value="red">Červená</option>
+              <option value="blue">Modrá</option>
+              <option value="green">Zelená</option>
+          </select>
+      </div>
+
+  
+      <div class="product">
+        <img src="img/motorec.jpg" alt="Autodíl 5">
+        <h3>Motorový olej</h3>
+        <p>Olej dautomobilu.</p>
+        <p class="price">1500 Kč</p>
+    
+
+        <button class="btn btn-primary" onclick="addToCart(5, 'Motorový olej', 1500)">Přidat do košíku</button>
+
+        <label for="color-select-2">Vyberte barvu:</label>
+        <select id="color-select-2" class="form-select">
+            <option value="red">Červená</option>
+            <option value="blue">Modrá</option>
+            <option value="green">Zelená</option>
+        </select>
+    </div>
+      
+    </div>
+
+
+    <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="cartModalLabel">Shrnutí objednávky</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="cartContent">
+             
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Zavřít</button>
+                    <button type="button" class="btn btn-primary" id="confirmOrderBtn">Potvrdit objednávku</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   
+    <div id="orderForm" class="container" style="display: none;">
+        <h2>Formulář pro zadání údajů</h2>
+        <form id="orderDetailsForm">
+            <div class="mb-3">
+                <label for="fullName" class="form-label">Jméno a příjmení</label>
+                <input type="text" class="form-control" id="fullName" required>
+            </div>
+            <div class="mb-3">
+                <label for="address" class="form-label">Adresa</label>
+                <input type="text" class="form-control" id="address" required>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">E-mail</label>
+                <input type="email" class="form-control" id="email" required>
+            </div>
+            <div class="mb-3">
+                <label for="phone" class="form-label">Telefon</label>
+                <div class="d-flex">
+                    <select id="phonePrefix" class="form-select" required>
+                        <option value="+420" selected>+420</option>
+                        <option value="+421">+421</option>
+                    </select>
+                    <input type="text" id="phoneNumber" class="form-control" maxlength="9" required placeholder="Telefonní číslo">
+                </div>
+            </div>
+            <button type="submit" class="btn btn-success">Odeslat objednávku</button>
+        </form>
+    </div>
+
+    <footer>
+        <p>Autor: Odenthal Petr</p>
+        <p><a href="mailto:peta.odenthal@gmail.com">peta.odenthal@gmail.com</a></p>
+    </footer>
+
+    <script>
+        const cart = [];
+
+     
+        function addToCart(productId, name, price, color) {
+            const productIndex = cart.findIndex(item => item.id === productId);
+            if (productIndex === -1) {
+                cart.push({ id: productId, name, price, color, quantity: 1 });
+            } else {
+                cart[productIndex].quantity++;
+            }
+            updateCart();
+        }
+
+     
+        function removeFromCart(productId) {
+            const productIndex = cart.findIndex(item => item.id === productId);
+            if (productIndex !== -1) {
+                cart.splice(productIndex, 1);
+            }
+            updateCart();
+        }
+
+        function updateCart() {
+            const cartContent = document.getElementById('cartContent');
+            const cartCount = document.getElementById('cartCount');
+            cartContent.innerHTML = '';
+            let total = 0;
+
+            cart.forEach(item => {
+                const cartItem = document.createElement('div');
+                cartItem.classList.add('d-flex', 'justify-content-between');
+                cartItem.innerHTML = `
+                    <span>${item.name} x${item.quantity}</span>
+                    <span>${item.price * item.quantity} Kč</span>
+                    <button class="btn btn-danger btn-sm" onclick="removeFromCart(${item.id})">Odebrat</button>
+                `;
+                cartContent.appendChild(cartItem);
+                total += item.price * item.quantity;
+            });
+
+            const totalDiv = document.createElement('div');
+            totalDiv.classList.add('d-flex', 'justify-content-between', 'fw-bold');
+            totalDiv.innerHTML = `<span>Celkem:</span> <span>${total} Kč</span>`;
+            cartContent.appendChild(totalDiv);
+
+            cartCount.innerText = cart.length;
+        }
+
+       
+        document.getElementById('confirmOrderBtn').addEventListener('click', () => {
+            document.getElementById('cartModal').classList.remove('show');
+            document.getElementById('orderForm').style.display = 'block';
+        });
+    </script>
+</body>
+</html>
